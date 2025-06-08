@@ -1,0 +1,3 @@
+# Agent configuration 
+id: task_agent
+entry_point: tech_ai_team_adk.agent.task_agent.task_agent:TaskAgent
