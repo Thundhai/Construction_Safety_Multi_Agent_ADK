@@ -1,0 +1,6 @@
+# Agent configuration
+name: TechAITeam
+entry_point: tech_ai_team_adk.agent.root_agent.root_agent:get_agent
+type: llm
+llm:
+  model: gemini-2.0-flash
