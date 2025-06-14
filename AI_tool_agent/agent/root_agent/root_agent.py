@@ -9,7 +9,7 @@ class RootAgent(Agent):
             model="gemini-2.0-flash"
         )
 
-    async def run(self, context: RuntimeContext) -> None:
+    async def run(self, context) -> None:
         task = context.task
         context.logger.info(f"📥 RootAgent received task: {task}")
 
