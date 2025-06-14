@@ -4,3 +4,13 @@ entry_point: tech_ai_team_adk.agent.root_agent.root_agent:get_agent
 type: llm
 llm:
   model: gemini-2.0-flash
+
+agents:
+  - id: content_creation_agent
+    entrypoint: content_creation_agent.agent:get_agent
+  - id: data_engineer_agent
+    entrypoint: data_engineer_agent.agent:get_agent
+  - id: compliance_checker_agent
+    entrypoint: compliance_checker_agent.agent:get_agent
+  - id: voice_over_agent
+    entrypoint: voice_over_agent.agent:get_agent
