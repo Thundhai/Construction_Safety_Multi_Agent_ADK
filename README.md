@@ -103,7 +103,7 @@ Our system ingests incident and observation reports from construction sites and 
 
 1. Clone this repo:
 ```bash
-git clone https://github.com/Thundhai/tech_ai_team_adk.git
+git clone https://github.com/Thundhai/Construction_Safety_Multi_Agent_ADK.git
 cd tech_ai_team_adk
 ```
 
@@ -171,7 +171,7 @@ Planned or potential features:
 - **Challenge:** Automate a real-world process using multi-agent systems
 - **Solution:** Smart, compliant, content automation for construction safety
 - **Team:** Solo (Babatunde Adedigba)
-- **GitHub:** [https://github.com/Thundhai/tech_ai_team_adk](https://github.com/Thundhai/tech_ai_team_adk)
+- **GitHub:** https://github.com/Thundhai/Construction_Safety_Multi_Agent_ADK.git
 
 ---
 
