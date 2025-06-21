@@ -5,46 +5,36 @@ class ContentCreationAgent(Agent):
     def __init__(self):
         super().__init__(
             name="ContentCreationAgent",
-            description="Creates social media and voice-over content for construction safety.",
-            instructions="Generate creative content including captions, descriptions, or scripts based on platform."
+            description="Generates safety-related content such as captions, scripts, and safety instructions.",
+            model="gemini-2.0-pro"  # You can switch to 'gemini-1.5-pro' if needed
         )
 
-    def run(self, context: RuntimeContext) -> None:
-        task = context.task
-        context.logger.info(f"📥 Received task: {task}")
+    async def run(self, context) -> None:
+        prompt = context.input
+        prompt_template = f"""
+        You are a professional safety content writer. Create engaging content for the following task:
 
-        task_name = task.get("task_name", "").lower()
-        data_summary = task.get("data_summary", "")
-        language = task.get("language", "en")
+        Task: {prompt}
 
-        output = ""
-
-        if "instagram" in task_name:
-            output = random.choice([
-                "🏗️ Safety first on every site! #ConstructionLife",
-                "👷‍♂️ PPE isn't optional—it's life-saving! #SiteSafety",
-                "🔍 Spot the hazard before it spots you! #BeAware"
-            ])
-        elif "tiktok" in task_name:
-            output = random.choice([
-                "🎬 TikTok Safety Reel: Wear your gear, save a life! #JobsiteReady",
-                "🚨 One mistake can cost everything. Stay alert. #ConstructionTok",
-                "👷‍♀️ AI-powered safety tips coming your way! #SmartSite"
-            ])
-        elif "voice-over" in task_name:
-            output = (
-                "Welcome to our construction site safety briefing. "
-                "Always wear your helmet, high-visibility vest, and boots. "
-                "Report any unsafe behavior. Stay alert, stay safe."
-            )
+        Requirements:
+        - Clear, simple language
+        - Focus on safety best practices
+        - Format content for the specified platform (e.g., Instagram, TikTok, safety briefing)
+        - Output should be concise and engaging
+        - Example: "Stay safe! Always use a box cutter with care. #HandSafety"
+        """
+        context.logger.info("[ContentCreationAgent] Generating content for input task.")
+        # Use LLM if available, else stub
+        if hasattr(context.llm, 'complete'):
+            result = await context.llm.complete(prompt_template)
+            # If LLM returns an object with .text, use it
+            if hasattr(result, 'text'):
+                content = result.text
+            else:
+                content = str(result)
         else:
-            output = "⚠️ Task type not recognized by ContentCreationAgent."
-
-        if language != "en":
-            output = f"[Translated to {language.upper()}] {output}"
-
-        context.logger.info(f"✅ Content Generated: {output}")
-        context.complete({"content": output})
+            content = "[Stub] Content generated for: " + prompt
+        context.complete({"content": content})
 
 def get_agent():
     return ContentCreationAgent()

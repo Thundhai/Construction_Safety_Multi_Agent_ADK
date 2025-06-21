@@ -1,5 +1,6 @@
 from google.adk import Agent
-from google.cloud.agent_app.runtime_context import RuntimeContext
+
+
 import time
 import random
 
@@ -7,17 +8,14 @@ class DataEngineerAgent(Agent):
     def __init__(self):
         super().__init__(
             name="DataEngineerAgent",
-            description="Processes raw construction safety data to prepare it for analysis.",
-            instructions="Collect, clean, process, and preprocess site data to prepare for insights."
+            description="Processes raw construction safety data to prepare it for analysis."
         )
 
-    def run(self, context: RuntimeContext) -> None:
+    async def run(self, context) -> None:
         task = context.task
-        context.logger.info(f"📥 Received task: {task}")
-
+        context.logger.info(f"[DataEngineerAgent] Received task: {task}")
         task_name = task.get("task_name", "")
         output = ""
-
         if "Collect" in task_name:
             output = self.collect_data()
         elif "Clean" in task_name:
@@ -27,12 +25,11 @@ class DataEngineerAgent(Agent):
         elif "Preprocess" in task_name:
             output = self.preprocess_data()
         else:
-            output = f"⚠️ Unknown task: {task_name}"
+            output = f"[DataEngineerAgent] Unknown task: {task_name}"
             context.logger.warn(output)
             context.complete({"error": output})
             return
-
-        context.logger.info(f"✅ Completed: {task_name}")
+        context.logger.info(f"[DataEngineerAgent] Completed: {task_name}")
         context.complete({"result": output})
 
     def collect_data(self):

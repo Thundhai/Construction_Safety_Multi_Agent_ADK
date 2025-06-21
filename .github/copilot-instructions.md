@@ -1,0 +1,3 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This workspace is a Google ADK-compliant multi-agent Python package. All agents must inherit from `Agent` (from `google.adk`), implement async `run(self, context)`, and use `context.complete(...)` for output. Register agents in `adk.yaml` for ADK deployment. Use `context.call(...)` for sub-agent routing. Do not use direct returns from `run` methods. For local testing, a fallback Agent class is provided.

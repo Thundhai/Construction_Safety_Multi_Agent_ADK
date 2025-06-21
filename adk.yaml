@@ -1,0 +1,35 @@
+agents:
+  - name: RootAgent
+    entrypoint: tech_ai_team_adk.agent.root_agent:RootAgent
+  - name: ComplianceCheckerAgent
+    entrypoint: compliance_checker_agent.agent:ComplianceCheckerAgent
+  - name: ContentCreationAgent
+    entrypoint: content_creation_agent.agent:ContentCreationAgent
+  - name: DataEngineerAgent
+    entrypoint: data_engineer_agent.agent:DataEngineerAgent
+  - name: TranslationAgent
+    entrypoint: translator_agent.agent:TranslationAgent
+  - name: VoiceOverAgent
+    entrypoint: voiceover_agent.agent:VoiceOverAgent
+  - name: RiskAssessmentAgent
+    entrypoint: run_batch_from_csv:RiskAssessmentAgent
+  - name: AudienceAnalysisAgent
+    entrypoint: run_batch_from_csv:AudienceAnalysisAgent
+  - name: ContentStrategyAgent
+    entrypoint: run_batch_from_csv:ContentStrategyAgent
+  - name: ScriptWritingAgent
+    entrypoint: run_batch_from_csv:ScriptWritingAgent
+  - name: VideoEditingAgent
+    entrypoint: run_batch_from_csv:VideoEditingAgent
+  - name: AudioEngineeringAgent
+    entrypoint: run_batch_from_csv:AudioEngineeringAgent
+  - name: LocalizationAgent
+    entrypoint: run_batch_from_csv:LocalizationAgent
+  - name: ContentLocalizationAgent
+    entrypoint: run_batch_from_csv:ContentLocalizationAgent
+  - name: UsabilityTestingAgent
+    entrypoint: run_batch_from_csv:UsabilityTestingAgent
+  - name: LearningAnalyticsAgent
+    entrypoint: run_batch_from_csv:LearningAnalyticsAgent
+  - name: StyleToneAnalysisAgent
+    entrypoint: run_batch_from_csv:StyleToneAnalysisAgent
