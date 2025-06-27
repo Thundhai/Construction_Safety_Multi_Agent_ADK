@@ -1,7 +1,6 @@
 # tech_ai_team_adk/agent/root_agent.py
 
 from google.adk import Agent
-from tech_ai_team_adk import root_agent
 
 class RootAgent(Agent):
     def __init__(self):
@@ -32,7 +31,7 @@ class RootAgent(Agent):
             response = await context.call("voiceover_agent", input=task_input)
             result["voiceover"] = response.output
 
-        elif "risk" in task_input or "hazard" in task_input:l
+        elif "risk" in task_input or "hazard" in task_input:
             context.logger.info("⚠️ Routing to Risk Assessment Agent")
             response = await context.call("risk_assessment_agent", input=task_input)
             result["risk_assessment"] = response.output

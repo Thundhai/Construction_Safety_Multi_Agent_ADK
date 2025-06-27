@@ -91,16 +91,9 @@ Our system ingests incident and observation reports from construction sites and 
 - CSV & JSON for task input schema
 - Content suitable for platforms like Instagram, TikTok, and LMS portals
 
----
-
-## 📊 Architecture Diagram
-
-![Flowchart](A_flowchart-style_digital_illustration_depicts_the.png)
-
----
+-----
 
 ## ▶️ How to Run Locally
-
 1. Clone this repo:
 ```bash
 git clone https://github.com/Thundhai/tech_ai_team_adk.git
