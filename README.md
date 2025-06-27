@@ -1,9 +1,9 @@
 
-# Tech_AI_Team: AI Agents for Construction Safety Content & Compliance
+# Construction_Safety _Multi _Agent_ADK : AI Agents for Construction Safety Content & Compliance
 
 ## Overview
 
-Tech_AI_Team is a multi-agent system built with Google’s Agent Development Kit (ADK) to enhance construction site safety using AI. It automates content generation, ensures regulatory compliance, adapts content for global audiences, performs safety risk assessments, and can even produce voice-over scripts. This project was developed for the **Google Cloud Multi-Agent Hackathon 2024**.
+Construction_Safety _Multi _Agent_ADK is a multi-agent system built with Google’s Agent Development Kit (ADK) to enhance construction site safety using AI. It automates content generation, ensures regulatory compliance, adapts content for global audiences, performs safety risk assessments, and can even produce voice-over scripts. This project was developed for the **Google Cloud Multi-Agent Hackathon 2024**.
 
 ---
 
@@ -96,7 +96,7 @@ Our system ingests incident and observation reports from construction sites and 
 ## ▶️ How to Run Locally
 1. Clone this repo:
 ```bash
-git clone https://github.com/Thundhai/tech_ai_team_adk.git
+git clone https://github.com/Thundhai/Construction_Safety_Multi_Agent_ADK.git
 cd tech_ai_team_adk
 ```
 
@@ -164,7 +164,7 @@ Planned or potential features:
 - **Challenge:** Automate a real-world process using multi-agent systems
 - **Solution:** Smart, compliant, content automation for construction safety
 - **Team:** Solo (Babatunde Adedigba)
-- **GitHub:** [https://github.com/Thundhai/tech_ai_team_adk](https://github.com/Thundhai/tech_ai_team_adk)
+- **GitHub:** https://github.com/Thundhai/Construction_Safety_Multi_Agent_ADK.git
 
 ---
 
