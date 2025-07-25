@@ -1,31 +1,31 @@
-from google.adk import Agent
-from google.adk.agent import AgentContext
-
-name: TechAITeam
-entry_point: tech_ai_team_adk.root_agent:get_agent
-type: llm
-llm:
-  model: gemini-2.0-flash
-is_task_entrypoint: true
-
 agents:
-  - id: content_creation_agent
-    entrypoint: content_creation_agent.agent:get_agent
-  - id: translator_agent
-    entrypoint: translator_agent.agent:get_agent
-  - id: voiceover_agent
-    entrypoint: voiceover_agent.agent:get_agent
-  - id: risk_assessment_agent
-    entrypoint: risk_assessment_agent.agent:get_agent
-  - id: audience_analysis_agent
-    entrypoint: audience_analysis_agent.agent:get_agent
-  - id: content_localization_agent
-    entrypoint: content_localization_agent.agent:get_agent
-  - id: usability_testing_agent
-    entrypoint: usability_testing_agent.agent:get_agent
-  - id: learning_analytics_agent
-    entrypoint: learning_analytics_agent.agent:get_agent
-  - id: style_tone_agent
-    entrypoint: style_tone_agent.agent:get_agent
+  - name: RootAgent
+    entrypoint: root_agent:RootAgent
 
+  - name: ComplianceCheckerAgent
+    entrypoint: agents.compliance_checker_agent:ComplianceCheckerAgent
+
+  - name: IncidentManagementAgent
+    entrypoint: agents.incident_management_agent:IncidentManagementAgent
+
+  - name: InspectionAuditAgent
+    entrypoint: agents.inspection_audit_agent:InspectionAuditAgent
+
+  - name: EnvironmentalMonitoringAgent
+    entrypoint: agents.environmental_monitoring_agent:EnvironmentalMonitoringAgent
+
+  - name: DataEngineerAgent
+    entrypoint: agents.data_engineer_agent:DataEngineerAgent
+
+  - name: AudienceAnalysisAgent
+    entrypoint: agents.audience_analysis_agent:AudienceAnalysisAgent
+
+  - name: LearningAnalyticsAgent
+    entrypoint: agents.learning_analytics_agent:LearningAnalyticsAgent
+
+  - name: TrainingComplianceAgent
+    entrypoint: agents.training_compliance_agent:TrainingComplianceAgent
+
+  - name: ReflectiveAgent
+    entrypoint: agents.reflective_agent:ReflectiveAgent
 

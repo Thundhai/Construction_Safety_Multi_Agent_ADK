@@ -1,35 +1,34 @@
-agents:
+name: tech_ai_team_adk
+version: 0.1
+description: AI agents for safety, audit, compliance, training, and environmental monitoring
+entry_point: agents.root_agent:get_agent
+
   - name: RootAgent
-    entrypoint: tech_ai_team_adk.agent.root_agent:RootAgent
+    entrypoint: agents.root_agent:RootAgent
+
   - name: ComplianceCheckerAgent
-    entrypoint: compliance_checker_agent.agent:ComplianceCheckerAgent
-  - name: ContentCreationAgent
-    entrypoint: content_creation_agent.agent:ContentCreationAgent
+    entrypoint: agents.compliance_checker_agent:ComplianceCheckerAgent
+
+  - name: IncidentManagementAgent
+    entrypoint: agents.incident_management_agent:IncidentManagementAgent
+
+  - name: InspectionAuditAgent
+    entrypoint: agents.inspection_audit_agent:InspectionAuditAgent
+
+  - name: EnvironmentalMonitoringAgent
+    entrypoint: agents.environmental_monitoring_agent:EnvironmentalMonitoringAgent
+
   - name: DataEngineerAgent
-    entrypoint: data_engineer_agent.agent:DataEngineerAgent
-  - name: TranslationAgent
-    entrypoint: translator_agent.agent:TranslationAgent
-  - name: VoiceOverAgent
-    entrypoint: voiceover_agent.agent:VoiceOverAgent
-  - name: RiskAssessmentAgent
-    entrypoint: run_batch_from_csv:RiskAssessmentAgent
+    entrypoint: agents.data_engineer_agent:DataEngineerAgent
+
   - name: AudienceAnalysisAgent
-    entrypoint: run_batch_from_csv:AudienceAnalysisAgent
-  - name: ContentStrategyAgent
-    entrypoint: run_batch_from_csv:ContentStrategyAgent
-  - name: ScriptWritingAgent
-    entrypoint: run_batch_from_csv:ScriptWritingAgent
-  - name: VideoEditingAgent
-    entrypoint: run_batch_from_csv:VideoEditingAgent
-  - name: AudioEngineeringAgent
-    entrypoint: run_batch_from_csv:AudioEngineeringAgent
-  - name: LocalizationAgent
-    entrypoint: run_batch_from_csv:LocalizationAgent
-  - name: ContentLocalizationAgent
-    entrypoint: run_batch_from_csv:ContentLocalizationAgent
-  - name: UsabilityTestingAgent
-    entrypoint: run_batch_from_csv:UsabilityTestingAgent
+    entrypoint: agents.audience_analysis_agent:AudienceAnalysisAgent
+
   - name: LearningAnalyticsAgent
-    entrypoint: run_batch_from_csv:LearningAnalyticsAgent
-  - name: StyleToneAnalysisAgent
-    entrypoint: run_batch_from_csv:StyleToneAnalysisAgent
+    entrypoint: agents.learning_analytics_agent:LearningAnalyticsAgent
+
+  - name: TrainingComplianceAgent
+    entrypoint: agents.training_compliance_agent:TrainingComplianceAgent
+
+  - name: ReflectiveAgent
+    entrypoint: agents.reflective_agent:ReflectiveAgent

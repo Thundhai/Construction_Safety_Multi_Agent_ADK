@@ -1,0 +1,17 @@
+[
+  {
+    "subject": "scaffolding",
+    "conditions": {
+      "height": ">2",
+      "has_guardrails": false
+    },
+    "violation": "Missing guardrails on scaffolding over 2m."
+  },
+  {
+    "subject": "ppe",
+    "conditions": {
+      "helmet": false
+    },
+    "violation": "Worker not wearing helmet."
+  }
+]

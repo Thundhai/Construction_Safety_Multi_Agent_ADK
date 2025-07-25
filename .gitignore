@@ -1,8 +1,0 @@
-# Ignore Visual Studio and VS Code folders
-.vs/
-.vscode/
-# Ignore Python cache
-__pycache__/
-# Ignore OS files
-.DS_Store
-Thumbs.db
